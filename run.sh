@@ -2,19 +2,17 @@
 
 cd /var/www/html
 
-touch index.html
-chmod 777 index.html
+sudo touch index.html
+sudo chmod 777 index.html
 
-export i = "<html><head><title>You have won big!</title></head><body><p><a href = "/var/www/html/A/A.html">Click here for a free iphone</a></p></body></html>"
+echo "<html><head><title>You have won big!</title></head><body><a href = "/var/www/html/A/A.html">Click here for a free iphone</a></body></html>" > index.html
 
-echo $i > index.html
-
-mkdir A
+sudo rm -r A
+sudo mkdir A
 cd A
 
-touch A.html
-chmod 777 A.html
+sudo touch A.html
+sudo chmod 777 A.html
 
-export j = "<html> <head><title>verification page</title></head> <body><p>Please enter your credit card info</p><body> </html>"
+echo  "<html> <head><title>verification page</title></head> <body>Please enter your credit card info<body> </html>" > A.html
 
-echo $j > A.html
